@@ -1,0 +1,59 @@
+/* Base styles for small screens (mobile-first) */
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Added for consistency */
+}
+
+/* Base styles for the divs */
+div {
+    display: inline-block; /* Aligns divs side-by-side */
+    width: 100%; /* Default width for mobile */
+    margin: 5px;
+    padding: 2px;
+    /* Added to align images and text */
+    text-align: center;
+}
+
+/* Base styles for images within divs */
+div img {
+    max-width: 150px; /* Use max-width for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: auto;
+}
+
+/* Media query 1: For screens 772px and wider */
+@media screen and (min-width: 772px) {
+    div {
+        width: 45%; /* Change layout to 45% of viewport width */
+    }
+
+    div img {
+        max-height: 30vh; /* Change max height to 30% of viewport height */
+        width: auto; /* Let the image width adjust to its new height */
+    }
+}
+
+/* Media query 2: For screens 998px and wider */
+@media screen and (min-width: 998px) {
+    div {
+        width: 30%; /* Change layout to 30% of viewport width */
+    }
+}
